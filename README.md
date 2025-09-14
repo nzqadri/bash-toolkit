@@ -95,6 +95,119 @@ A script to back up a folder from your computer to an Amazon S3 storage bucket.
 
 ---
 
+### 3. Git Multi-Push Script (`git-multi-push.sh`)
+
+A script to push your current code to multiple Git repositories (remotes) at the same time.
+
+#### When This Script Can Help
+
+Use this script when:
+
+-   You need to keep a project synchronized across different services (e.g., GitHub and GitLab).
+-   You maintain a private backup repository and want to push to it at the same time as your main repository.
+-   You want to save time by not having to type `git push` for each remote individually.
+
+#### Features
+
+-   **Smart Default:** Pushes to *all* your configured remotes if you don't specify any.
+-   **Targeted Pushing:** You can easily specify which remotes to push to.
+-   **User-Friendly Output:** Uses colors to clearly show which pushes were successful and which failed.
+-   **Supports Common Options:** Works with flags like `--force` and `--tags`.
+
+#### How to Use
+
+1.  **Give the script permission to run:**
+    This is a one-time step for this script.
+    ```bash
+    chmod +x git-multi-push.sh
+    ```
+
+2.  **Push to ALL remotes:**
+    This is the simplest way to use it.
+    ```bash
+    ./git-multi-push.sh
+    ```
+
+3.  **Push to specific remotes:**
+    If you only want to push to `origin` and `gitlab`, for example.
+    ```bash
+    ./git-multi-push.sh origin gitlab
+    ```
+
+4.  **Push with options:**
+    You can include other Git options, like forcing a push.
+    ```bash
+    ./git-multi-push.sh --force
+    ```
+
+---
+
+### 4. Website Status Checker (`check-website.sh`)
+
+A smart script to check if a website is online. If it seems down, it also checks if the problem is just on your end or if it's down for everyone.
+
+#### When This Script Can Help
+
+Use this script when:
+
+-   You want to quickly see if a website is down, or if the problem is on your end.
+
+#### Features
+
+-   **Smart Check:** First checks locally, then uses an external service if the site appears down.
+-   **Informative Status:** Tells you if a site is `UP`, `DOWN (Just for you)`, or `DOWN (For everyone)`.
+-   **Fast & Efficient:** Uses a lightweight request that doesn't download the whole page.
+
+#### How to Use
+
+1.  **Give the script permission to run:**
+    This is a one-time step for this script.
+    ```bash
+    chmod +x check-website.sh
+    ```
+
+2.  **Check a website:**
+    Just provide the full URL of the site you want to check.
+    ```bash
+    ./check-website.sh https://www.github.com
+    ```
+
+---
+
+### 5. SSL Expiry Check Script (`ssl-expiry-check.sh`)
+
+A script to check when a website's SSL certificate will expire. This helps you renew it on time and avoid security warnings for your visitors.
+
+#### When This Script Can Help
+
+Use this script when:
+
+-   You want to proactively check your website's SSL certificate status.
+-   You need to monitor multiple domains and ensure none of them expire unexpectedly.
+
+#### Features
+
+-   **Clear Expiry Info:** Tells you exactly how many days are left until the certificate expires.
+-   **Color-Coded Status:** Uses colors to show if the status is OK (green), a warning (yellow), or critical/expired (red).
+-   **Custom Port Support:** Can check domains that use non-standard ports for HTTPS (e.g., `mydomain.com:8443`).
+
+#### How to Use
+
+1.  **Give the script permission to run:**
+    This is a one-time step for this script.
+    ```bash
+    chmod +x ssl-expiry-check.sh
+    ```
+
+2.  **Check a domain's SSL certificate:**
+    Just provide the domain name.
+    ```bash
+    ./ssl-expiry-check.sh google.com
+    ```
+    It will tell you the status and how many days are left.
+
+---
+
 ## Hire Me
 
 Looking for a skilled developer for your project? I'm available for freelance work on Upwork.
