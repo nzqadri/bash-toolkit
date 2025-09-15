@@ -208,6 +208,43 @@ Use this script when:
 
 ---
 
+### 6. Laravel Project Setup Script (`setup-laravel.sh`)
+
+A comprehensive script that fully automates the creation and setup of a new Laravel project.
+
+#### When This Script Can Help
+
+Use this script when:
+
+-   You want to start a new Laravel project without manually running all the setup commands.
+-   You need to ensure new projects are set up consistently every time.
+-   You are setting up a new development machine and want to install Laravel's dependencies automatically.
+
+#### Features
+
+-   **All-in-One Setup:** From `composer create-project` to setting file permissions, it handles everything.
+-   **Dependency Auto-Installer:** Checks for PHP, Git, Composer, and NPM, and offers to install them if they are missing.
+-   **Sensible Defaults:** Automatically configures a local SQLite database, perfect for getting started quickly.
+-   **Git Ready:** Initializes a new Git repository and makes the first commit for you.
+-   **Front-End Ready:** Installs and builds all NPM dependencies.
+
+#### How to Use
+
+1.  **Give the script permission to run:**
+    This is a one-time step for this script.
+    ```bash
+    chmod +x setup-laravel.sh
+    ```
+
+2.  **Create your new project:**
+    Just provide the name for your new project's folder.
+    ```bash
+    ./setup-laravel.sh my-awesome-app
+    ```
+    The script will handle the rest!
+
+---
+
 ## Hire Me
 
 Looking for a skilled developer for your project? I'm available for freelance work on Upwork.
